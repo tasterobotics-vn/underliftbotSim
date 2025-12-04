@@ -1,0 +1,259 @@
+<sdf version='1.12'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>model://warehouse</uri>
+      <name>warehouse</name>
+      <pose>2.2810499668121338 -3.8178501129150391 -0.096554003655910492 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf</name>
+      <pose>-5.1807436943054199 0.67052000761032104 0 0 0 -1.5701500470040257</pose>
+    </include>
+    <include>
+      <uri>model://shelf_aruco</uri>
+      <name>shelf_aruco</name>
+      <pose>9.5739240646362305 -7.1395645141601562 0 0 0 -1.5796799841975226</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_0</name>
+      <pose>-5.2161712646484375 -7.0048308372497559 0 0 0 1.5574500066219441</pose>
+    </include>
+    <include>
+      <uri>model://shelf_aruco</uri>
+      <name>shelf_aruco_0</name>
+      <pose>7.8038535118103027 6.5313601493835449 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_1</name>
+      <pose>9.7519474029541016 -0.1516842395067215 0 0 0 -1.5667299961576662</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_2</name>
+      <pose>9.7378396987915039 -13.990601539611816 0 0 0 -1.57414000646718</pose>
+    </include>
+    <include>
+      <uri>model://shelf_aruco</uri>
+      <name>shelf_aruco_1</name>
+      <pose>-5.108086109161377 -13.517351150512695 0 0 0 1.5250000278923885</pose>
+    </include>
+    <include>
+      <uri>model://shelf_aruco</uri>
+      <name>shelf_aruco_2</name>
+      <pose>-2.4649996757507324 6.5148401260375977 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://shelf</uri>
+      <name>shelf_3</name>
+      <pose>-6.1552901268005371 8.0353097915649414 0 0 0 -1.5930616181997121</pose>
+    </include>
+    <include>
+      <uri>model://shelf_aruco</uri>
+      <name>shelf_aruco_3</name>
+      <pose>4.3502578735351562 9.2272157669067383 0 0 0 -1.6047099797835134</pose>
+    </include>
+    <include>
+      <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+      <name>aws_robomaker_warehouse_ClutteringC_01</name>
+      <pose>9.5110041795737814 -9.7421826203101087 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01</name>
+      <pose>9.5487165055783336 -16.818897015333864 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+      <name>aws_robomaker_warehouse_Bucket_01</name>
+      <pose>-4.9350379034945391 -17.227191875373077 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+      <name>aws_robomaker_warehouse_Bucket_01_0</name>
+      <pose>-5.007455094500842 -10.138261724054519 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_0</name>
+      <pose>-5.1695828735334963 -2.0297424693615875 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Table</uri>
+      <name>Table</name>
+      <pose>15.360663091333695 -28.303236486172551 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://foldable_chair</uri>
+      <name>foldable_chair</name>
+      <pose>15.323948942293962 -27.456168600459225 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+      <name>aws_robomaker_warehouse_ClutteringA_01_1</name>
+      <pose>-11.159585612019697 -27.711489938196443 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue</name>
+      <pose>9.6518984747050265 -1.7099081330852564 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_0</name>
+      <pose>9.6669004191856516 -1.8282983490819473 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_1</name>
+      <pose>9.6577056029451516 -1.9999416189126333 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_2</name>
+      <pose>9.6564193389680142 -2.1737383852512688 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_3</name>
+      <pose>9.6520133914391035 -2.3269461041343558 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_4</name>
+      <pose>9.6260754468375591 -2.4968017052858245 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_5</name>
+      <pose>9.629485466177762 -2.6825477194449632 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_6</name>
+      <pose>9.6352451769742906 -2.8778374992701812 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_7</name>
+      <pose>9.6318807248182541 -3.0450381676980824 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_8</name>
+      <pose>9.6321717470817507 -3.181899147301106 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_9</name>
+      <pose>9.5986571832774761 -3.3497672662995202 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <name>cone_blue_10</name>
+      <pose>9.5832961169989286 -3.48097896002924 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://aws_robomaker_warehouse_ClutteringD_01</uri>
+      <name>aws_robomaker_warehouse_ClutteringD_01</name>
+      <pose>-12.118599891662598 -4.2362899780273438 -0.3486819863319397 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://Table</uri>
+      <name>Table_0</name>
+      <pose>-11.332761556048919 20.260893938129293 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://ramp</uri>
+      <name>ramp</name>
+      <pose>0.34264609217643738 9.6922378540039062 0 0 0 -3.1033599999068775</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

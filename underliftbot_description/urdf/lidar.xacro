@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="lidar_radius" value="0.035" />
+    <xacro:property name="lidar_length" value="0.04" />
+
+    <link name="lidar_link">
+        <visual>
+            <geometry>
+                <cylinder radius="${lidar_radius}" length="${lidar_length}" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="black" />
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${lidar_radius}" length="${lidar_length}" />
+            </geometry>
+        </collision>
+        <xacro:cylinder_inertia m="1.0" r="${lidar_radius}" l="${lidar_length}"
+                                o_xyz="0 0 0" o_rpy="0 0 0" />
+    </link>
+
+    <!--Normal situation-->
+    <joint name="base_lidar_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="lidar_link" />
+        <origin xyz="0.247 0 0.177" rpy="0 0 3.14159265359" />
+    </joint>
+    <!--/Normal situation-->
+
+    <!--Slope situation-->
+    <!-- <joint name="base_lidar_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="lidar_link" />
+        <origin xyz="0.247 0 0.177" rpy="0 0.077243 3.14159265359" />
+    </joint> -->
+    <!--/Slope situation-->
+  
+  <gazebo reference="lidar_link">
+    <sensor name="lidar" type="gpu_lidar">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <topic>scan</topic>
+      <update_rate>10</update_rate>
+      <gz_frame_id>lidar_link</gz_frame_id>
+      <lidar>
+        <scan>
+          <horizontal>
+            <samples>1168</samples>
+            <resolution>1.00000</resolution>
+            <min_angle>1.1344640138</min_angle>
+            <max_angle>5.1487212934</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.050000</min>
+          <max>30.0</max>
+          <resolution>0.02</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </lidar>
+    </sensor>
+  </gazebo> 
+
+
+</robot>

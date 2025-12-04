@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot name="underlift_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <ros2_control name="GazeboSimSystem" type="system">
+
+        <!-- ros2_control Gazebo -->
+        <hardware>
+            <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        </hardware>
+        <!-- ros2_control Common Interfaces -->
+        <joint name="base_right_wheel_joint">
+            <command_interface name="velocity">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+
+        <joint name="base_left_wheel_joint">
+            <command_interface name="velocity">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+
+        <joint name="lift_joint">
+        <!-- choose limits that match your mechanism stroke -->
+        <command_interface name="position">
+            <param name="min">0.0</param>     <!-- fully down -->
+            <param name="max">0.5</param>    <!-- fully up, example -->
+        </command_interface>
+
+        <state_interface name="position">
+            <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity"/>
+        </joint>
+
+    </ros2_control>
+
+</robot>
