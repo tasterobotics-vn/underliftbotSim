@@ -29,12 +29,12 @@
         <joint name="lift_joint">
         <!-- choose limits that match your mechanism stroke -->
         <command_interface name="position">
-            <param name="min">0.0</param>     <!-- fully down -->
+            <param name="min">0.025</param>     <!-- fully down -->
             <param name="max">0.5</param>    <!-- fully up, example -->
         </command_interface>
 
         <state_interface name="position">
-            <param name="initial_value">0.0</param>
+            <param name="initial_value">0.025</param>
         </state_interface>
         <state_interface name="velocity"/>
         </joint>
