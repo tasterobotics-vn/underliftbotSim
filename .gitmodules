@@ -1,0 +1,12 @@
+[submodule "apriltag_detection"]
+	path = apriltag_detection
+	url = https://github.com/user247-tai/apriltag_detection.git
+[submodule "apriltag_viz"]
+	path = apriltag_viz
+	url = https://github.com/user247-tai/apriltag_viz.git
+[submodule "apriltag_ros"]
+	path = apriltag_ros
+	url = https://github.com/user247-tai/apriltag_ros.git
+[submodule "apriltag_msgs"]
+	path = apriltag_msgs
+	url = https://github.com/user247-tai/apriltag_msgs.git
