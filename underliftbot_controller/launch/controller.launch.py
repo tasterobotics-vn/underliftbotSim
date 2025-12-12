@@ -21,15 +21,6 @@ def generate_launch_description():
     )
 
     wheel_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["underliftbot_controller", 
-                   "--controller-manager", 
-                   "/controller_manager"
-        ]
-    )
-
-    wheel_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
         arguments=[
@@ -50,6 +41,8 @@ def generate_launch_description():
             "lift_position_controller",
             "--controller-manager",
             "/controller_manager",
+            '--controller-ros-args',
+            '-r /lift_position_controller/commands:=/cmd_lift_pose'
         ],
     )
 
