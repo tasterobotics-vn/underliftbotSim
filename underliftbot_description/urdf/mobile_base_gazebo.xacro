@@ -19,47 +19,25 @@
         <fdir1>1 0 0</fdir1>
     </gazebo>
 
-    <!-- Normal case -->
     <gazebo reference="front_right_caster_wheel_link">
-        <mu1 value="0.001" />
-        <mu2 value="0.1" />
+        <mu1 value="0.01" />
+        <mu2 value="0.01" />
     </gazebo>
 
     <gazebo reference="front_left_caster_wheel_link">
-        <mu1 value="0.001" />
-        <mu2 value="0.1" />
+        <mu1 value="0.01" />
+        <mu2 value="0.01" />
     </gazebo>
 
     <gazebo reference="back_right_caster_wheel_link">
-        <mu1 value="0.001" />
-        <mu2 value="0.1" />
+        <mu1 value="0.01" />
+        <mu2 value="0.01" />
     </gazebo>
 
     <gazebo reference="back_left_caster_wheel_link">
-        <mu1 value="0.001" />
-        <mu2 value="0.1" />
+        <mu1 value="0.01" />
+        <mu2 value="0.01" />
     </gazebo> 
-
-    <!-- Slope case -->
-    <!-- <gazebo reference="front_right_caster_wheel_link">
-        <mu1 value="0.001" />
-        <mu2 value="0.001" />
-    </gazebo>
-
-    <gazebo reference="front_left_caster_wheel_link">
-        <mu1 value="0.001" />
-        <mu2 value="0.001" />
-    </gazebo>
-
-    <gazebo reference="back_right_caster_wheel_link">
-        <mu1 value="0.001" />
-        <mu2 value="0.001" />
-    </gazebo>
-
-    <gazebo reference="back_left_caster_wheel_link">
-        <mu1 value="0.001" />
-        <mu2 value="0.001" />
-    </gazebo>  -->
 
     <gazebo>
         <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">

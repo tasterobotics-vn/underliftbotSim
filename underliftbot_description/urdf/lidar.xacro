@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <xacro:property name="lidar_radius" value="0.035" />
-    <xacro:property name="lidar_length" value="0.04" />
+    <xacro:property name="lidar_length" value="0.0125" />
 
     <link name="lidar_link">
         <visual>
@@ -21,21 +21,11 @@
                                 o_xyz="0 0 0" o_rpy="0 0 0" />
     </link>
 
-    <!--Normal situation-->
     <joint name="base_lidar_joint" type="fixed">
         <parent link="base_link" />
         <child link="lidar_link" />
-        <origin xyz="0.247 0 0.177" rpy="0 0 3.14159265359" />
+        <origin xyz="${base_length / 4.0} 0 ${base_height / 2.0}" rpy="0 0 3.14159265359" />
     </joint>
-    <!--/Normal situation-->
-
-    <!--Slope situation-->
-    <!-- <joint name="base_lidar_joint" type="fixed">
-        <parent link="base_link" />
-        <child link="lidar_link" />
-        <origin xyz="0.247 0 0.177" rpy="0 0.077243 3.14159265359" />
-    </joint> -->
-    <!--/Slope situation-->
   
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="gpu_lidar">
