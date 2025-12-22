@@ -71,6 +71,139 @@
       <name>Depot</name>
       <pose>10.364997623601234 0.60882116546404119 0 0 0 0</pose>
     </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00002</uri>
+      <name>tag36_11_00001</name>
+      <pose>-2.4924781322479248 7.9712347984313965 0.11262844502925873 0 -1.5708 1.5708</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://cart_model_2</uri>
+      <name>cart_model2_0</name>
+      <pose>-1.9974497197 7.47123479843 0.010166457292935922 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00003</uri>
+      <name>tag36_11_00002</name>
+      <pose>-0.49521669745445251 7.9712347984313965 0.11262844502925873 0 -1.5708 1.5708</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://cart_model_2</uri>
+      <name>cart_model2_1</name>
+      <pose>-0.0001882849 7.47123479843 0.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00004</uri>
+      <name>tag36_11_00003</name>
+      <pose>1.5189411105305899 7.9712347984313965 0.11262844502925873 0 -1.5708 1.5708</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://cart_model_2</uri>
+      <name>cart_model2_2</name>
+      <pose>2.01396952308 7.47123479843 0.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00005</uri>
+      <name>tag36_11_00004</name>
+      <pose>4.4940232445384698 7.9712347984313965 0.11262844502925873 0 -1.5708 1.5708</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://cart_model_2</uri>
+      <name>cart_model2_3</name>
+      <pose>4.98905165709 7.47123479843 0.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00006</uri>
+      <name>tag36_11_00005</name>
+      <pose>6.5056252111412327 7.9712347984313965 0.11262844502925873 0 -1.5708 1.5708</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://cart_model_2</uri>
+      <name>cart_model2_4</name>
+      <pose>7.00065362369 7.47123479843 0.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00007</uri>
+      <name>tag36_11_00006</name>
+      <pose>8.5118265151977539 7.9712347984313965 0.11262844502925873 0 -1.5708 1.5708</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://cart_model_2</uri>
+      <name>cart_model2_5</name>
+      <pose>9.00685492775 7.47123479843 0.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00003</uri>
+      <name>tag36_11_00001_0</name>
+      <pose>8.4743044491622062 -7.0236401557922363 0.11262844502925873 1.5708 -1.5708 -3.1416</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00004</uri>
+      <name>tag36_11_00002_0</name>
+      <pose>6.4928137260731162 -7.0236401557922363 0.11262844502925873 1.5708 -1.5708 -3.1416</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00005</uri>
+      <name>tag36_11_00003_0</name>
+      <pose>1.4930427191125051 -7.0236401557922363 0.11262844502925873 1.5708 -1.5708 -3.1416</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00006</uri>
+      <name>tag36_11_00004_0</name>
+      <pose>-0.51939174422231449 -7.0236401557922363 0.11262844502925873 1.5708 -1.5708 -3.1416</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00007</uri>
+      <name>tag36_11_00005_0</name>
+      <pose>-2.5207300186157227 -7.0236401557922363 0.11262844502925873 1.5708 -1.5708 -3.1416</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://Apriltag36_11_00002</uri>
+      <name>tag36_11_00006_0</name>
+      <pose>11.96028590238253 -7.02364015579223636 0.11262844502925873 1.5708 -1.5708 -3.1416</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://A_letter</uri>
+      <name>A_letter</name>
+      <pose>4.225921630859375 -0.89287352561950684 0.0010000000474974513 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model://B_letter</uri>
+      <name>B_letter</name>
+      <pose>4.225921630859375 -3.3017544746398926 0.0010000000474974513 0 0 -1.5708</pose>
+    </include>
+
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
       <cast_shadows>true</cast_shadows>
