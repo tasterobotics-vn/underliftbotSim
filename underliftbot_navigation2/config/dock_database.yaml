@@ -1,0 +1,49 @@
+docks:
+  dock_1A:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [-2.444, 7.549, 1.57]
+  dock_2A:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [-0.450, 7.549, 1.57]
+  dock_3A:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [1.575, 7.549, 1.57]
+  dock_4A:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [4.550, 7.549, 1.57]
+  dock_5A:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [6.563, 7.549, 1.57]
+  dock_6A:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [8.561, 7.549, 1.57]
+  dock_1B:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [12.037, -6.542, -1.57]
+  dock_2B:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [8.513, -6.542, -1.57]
+  dock_3B:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [6.548, -6.542, -1.57]
+  dock_4B:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [1.553, -6.542, -1.57]
+  dock_5B:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [-0.467, -6.542, -1.57]
+  dock_6B:
+    type: 'simple_charging_dock'
+    frame: map
+    pose: [-2.482, -6.542, -1.57]
