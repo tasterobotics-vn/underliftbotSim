@@ -1,0 +1,12 @@
+# Goal
+string begin
+string destination
+---
+# Result
+uint32 SUCCEEDDED=0
+uint32 FAILED=1
+uint32 CANCELED=2
+uint32 result
+---
+# Feedback
+string current_state
