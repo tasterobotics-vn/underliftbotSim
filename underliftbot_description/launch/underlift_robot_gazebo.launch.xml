@@ -14,18 +14,18 @@
     </node>
 
     <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
-        <arg name="gz_args" value="$(find-pkg-share underliftbot_description)/worlds/jetty.sdf -r" />
+        <arg name="gz_args" value="$(find-pkg-share underliftbot_description)/worlds/depot.sdf -r" />
     </include>
 
-    <timer period="60.0">
-        <node pkg="ros_gz_sim" exec="create" args="-topic robot_description -name underlift_robot -x 0.0 -y -2.0 -z 1.0" />
+    <timer period="10.0">
+        <node pkg="ros_gz_sim" exec="create" args="-topic robot_description -name underlift_robot -x 0.0 -y -0.0 -z 1.0" />
     </timer>
 
     <node pkg="ros_gz_bridge" exec="parameter_bridge">
         <param name="config_file" value="$(var gazebo_config_path)" />
     </node>
-
-    <timer period="60.0">
+    
+    <timer period="30.0">
         <include file="$(find-pkg-share underliftbot_controller)/launch/controller.launch.py">
         </include>
     </timer>
