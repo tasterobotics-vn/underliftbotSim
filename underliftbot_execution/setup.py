@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'underliftbot_execution = lifting_executor:main'
+            'underliftbot_execution = underliftbot_execution.underliftbot_execution:main'
         ],
     },
 )

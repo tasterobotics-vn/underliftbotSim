@@ -17,6 +17,9 @@ from rclpy.duration import Duration
 import yaml
 import time
 import threading
+from pathlib import Path
+
+from ament_index_python.packages import get_package_share_directory
 
 class CurrentTask:
     def __init__(self):
@@ -84,7 +87,10 @@ class LiftingExecution(Node):
             Point32(x=-0.3395, y=0.8,  z=0.0),
         ]
 
-    def loadDockNames(self, yaml_path = "/home/tai/underLiftBot_ws/src/underliftbotSim/underliftbot_navigation2/config/dock_database.yaml"):
+    def loadDockNames(self, yaml_path=None):
+        if yaml_path is None:
+            yaml_path = Path(get_package_share_directory("underliftbot_navigation2")) / "config" / "dock_database.yaml"
+
         with open(yaml_path, "r") as f:
             data = yaml.safe_load(f)
 
