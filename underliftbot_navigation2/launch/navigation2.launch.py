@@ -15,6 +15,8 @@ def generate_launch_description():
             'map',
             'depot.yaml'))
 
+    neo_localization2_dir = os.path.join(get_package_share_directory('underliftbot_navigation2'), 'config', 'neo_localization_params.yaml')
+
     param_file_name = 'nav2_params.yaml'
     param_dir = LaunchConfiguration(
         'params_file',
@@ -41,9 +43,11 @@ def generate_launch_description():
             default_value='true',
             description='Use simulation (Gazebo) clock if true'),
 
-        # IncludeLaunchDescription(
-        #     PythonLaunchDescriptionSource([neo_localization2_dir, '/test_setup.launch.py']),
-        # ),
+        LaunchDescription([
+            Node(
+                package='neo_localization2', executable='neo_localization_node', output='screen',
+                name='neo_localization2_node', parameters = [neo_localization2_dir])
+        ]),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([nav2_launch_file_dir, '/bringup_launch.py']),
