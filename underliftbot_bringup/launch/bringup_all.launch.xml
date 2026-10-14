@@ -1,0 +1,15 @@
+<launch>
+    <include file="$(find-pkg-share underliftbot_description)/launch/underlift_robot_gazebo.launch.xml">
+    </include>
+    
+    <timer period="35.0">
+        <include file="$(find-pkg-share underliftbot_navigation2)/launch/navigation2.launch.py">
+        </include>
+    </timer>
+
+    <include file="$(find-pkg-share apriltag_detection)/launch/april_detection.launch.py">
+    </include>
+
+    <node pkg="underliftbot_execution" exec="underliftbot_execution">
+    </node>
+</launch>
