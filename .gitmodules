@@ -10,3 +10,6 @@
 [submodule "apriltag_msgs"]
 	path = apriltag_msgs
 	url = https://github.com/user247-tai/apriltag_msgs.git
+[submodule "neo_localization2"]
+	path = neo_localization2
+	url = https://github.com/tasterobotics-vn/neo_localization2
