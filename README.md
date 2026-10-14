@@ -85,7 +85,8 @@ git clone --recurse-submodules https://github.com/tasterobotics-vn/underliftbotS
 
 ```
 cd ~/underliftbot_ws/src/underliftbotSim 
-chmod +x setup.sh ./setup.sh
+chmod +x setup.sh
+./setup.sh
 ```
 
 Wait for the setup script to finish installing dependencies and building the workspace.
@@ -99,7 +100,7 @@ Open a terminal and source the ROS 2 environment:
 ```
 source /opt/ros/kilted/setup.bash 
 source ~/behavior_tree_ws/install/setup.bash 
-source ~/nav2ws/install/setup.bash 
+source ~/nav2_ws/install/setup.bash 
 source ~/underliftbot_ws/install/setup.bash
 ```
 
