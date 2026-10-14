@@ -66,6 +66,54 @@ The typical flow in this workspace is:
 - `detected_dock_pose`: pose published for docking
 - `MoveThings`: custom high-level task action
 
+## Installation
+
+### 1. Create the Workspace
+
+mkdir -p ~/underliftbot_ws/src cd ~/underliftbot_ws/src
+
+
+### 2. Clone the Repository
+
+git clone --recurse-submodules https://github.com/tasterobotics-vn/underliftbotSim.git
+
+
+### 3. Run the Setup Script
+
+cd ~/underliftbot_ws/src/underliftbotSim chmod +x setup.sh ./setup.sh
+
+
+Wait for the setup script to finish installing dependencies and building the workspace.
+
+## Example Run
+
+### 1. Launch the Simulation
+
+Open a terminal and source the ROS 2 environment:
+
+source /opt/ros/kilted/setup.bash source ~/behavior_tree_ws/install/setup.bash source ~/nav2ws/install/setup.bash source ~/underliftbot_ws/install/setup.bash
+
+
+Launch the complete simulation:
+
+ros2 launch underliftbot_bringup bringup_all.launch.xml
+
+
+**Wait approximately 50 seconds** for the system to initialize before sending a task.
+
+### 2. Send a MoveThings Action Goal
+
+Open a new terminal and source the environments:
+
+source /opt/ros/kilted/setup.bash source ~/behavior_tree_ws/install/setup.bash source ~/nav2ws/install/setup.bash source ~/underliftbot_ws/install/setup.bash
+
+
+Send an example action goal to move an item from `dock_1A` to `dock_6B`:
+
+ros2 action send_goal /move_things custom_message/action/MoveThings '{begin: dock1A, destination: dock_6B}'
+
+
+
 ## Notes
 
 - Several package manifests still have placeholder descriptions/licenses.
